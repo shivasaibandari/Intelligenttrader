@@ -1,0 +1,22 @@
+:root { color-scheme: dark; --bg: #0b1020; --panel: #121a2d; --muted: #91a0b8; --line: #26334b; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: #eef3fb; font-family: Arial, Helvetica, sans-serif; }
+button, select { font: inherit; }
+.shell { max-width: 1440px; margin: 0 auto; padding: 24px; }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+.brand { font-size:24px; font-weight:750; letter-spacing:-.5px; }
+.sub { color:var(--muted); font-size:13px; margin-top:5px; }
+.pill { border:1px solid #735b2a; color:#f3ce7a; background:#342b1b; border-radius:999px; padding:7px 11px; font-size:12px; }
+.toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+button, select { border:1px solid var(--line); background:#151f34; color:#eef3fb; border-radius:9px; padding:10px 13px; cursor:pointer; }
+button.active { border-color:#8db4ff; background:#1b3155; }
+.grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:14px; }
+.panel { border:1px solid var(--line); background:var(--panel); border-radius:15px; padding:17px; min-width:0; }
+.span-3 { grid-column:span 3; } .span-4 { grid-column:span 4; } .span-5 { grid-column:span 5; } .span-7 { grid-column:span 7; } .span-8 { grid-column:span 8; } .span-12 { grid-column:span 12; }
+.label { color:var(--muted); font-size:12px; } .value { font-size:25px; font-weight:700; margin:9px 0 5px; } .positive { color:#63d6a3; } .negative { color:#ff8d96; } .neutral { color:#f2ce7a; }
+.panel-title { font-weight:700; margin-bottom:14px; } .small { color:var(--muted); font-size:12px; line-height:1.5; }
+.row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); } .row:last-child { border-bottom:0; }
+table { border-collapse:collapse; width:100%; font-size:12px; white-space:nowrap; } th,td { padding:10px 9px; text-align:right; border-bottom:1px solid var(--line); } th { color:var(--muted); font-weight:500; } th:first-child,td:first-child { text-align:left; }
+.table-wrap { overflow-x:auto; } .foot { margin-top:18px; color:var(--muted); font-size:12px; line-height:1.6; }
+@media (max-width:900px) { .shell { padding:14px; } .span-3,.span-4,.span-5,.span-7,.span-8 { grid-column:span 6; } .value { font-size:21px; } }
+@media (max-width:560px) { .span-3,.span-4,.span-5,.span-7,.span-8,.span-12 { grid-column:span 12; } .brand { font-size:21px; } }
